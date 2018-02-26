@@ -1,0 +1,19 @@
+<p> Lista de Pacientes</p>
+<p>Página: {{ pagina }}</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let paciente of pacientes" >
+      <!-- <td><a class="nav-link" [routerLink]="['/paciente',paciente.id]">{{paciente.id}}</a></td>
+       -->
+       <td><a class="nav-link" [routerLink]="['/pacientes',paciente.id]">{{paciente.id}}</a></td>
+      <td>{{paciente.nome}}</td>
+    </tr>
+  </tbody>
+</table>
+<button (click)="proximaPagina()">Próxima Página</button>
